@@ -84,7 +84,7 @@ void Minimum_Travelling_Cost(vector<vector<double>> edges, int start)
     cout << start << " "; // Salesman Starting Point
     for (int i = 0; i < edges.size() - 1; i++)
     {
-        cout << route[i] << " ";
+        cout << route[i] - 1 << " ";
     }
     cout << start << " "; // Salesman returning to the Point where he started his journey
 }
