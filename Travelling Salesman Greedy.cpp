@@ -19,7 +19,7 @@ void Minimum_Travelling_Cost(vector<vector<double>> edges, int start)
     // Starting from the first city
     // from which salesman starts its journey
 
-    Check_of_Visited_Route[0] = start;
+    Check_of_Visited_Route[start - 1] = 1;
     int route[edges.size()];
 
     while (i < edges.size() && j < edges[i].size())
@@ -99,12 +99,12 @@ int main()
     vector<vector<double>> edges(no_of_cities, vector<double>(no_of_cities, 0));
     vector<vector<double>> points(no_of_cities, vector<double>(2, 0));
 
-    for (int i = 1; i <= no_of_cities; i++)
+    for (int i = 0; i < no_of_cities; i++)
     {
         cout << "Enter x coordinate of " << i << "th city: " << endl;
-        cin >> points[i - 1][0];
+        cin >> points[i][0];
         cout << "Enter y coordinate of " << i << "th city: " << endl;
-        cin >> points[i - 1][1];
+        cin >> points[i][1];
     }
 
     for (int i = 0; i < no_of_cities; i++)
